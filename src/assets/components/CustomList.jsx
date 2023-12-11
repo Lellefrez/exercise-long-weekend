@@ -1,4 +1,11 @@
 export default function ({ type, list }) {
-  const lista = list.map((el, indx) => <li key={indx}>{el}</li>);
-  return type === "ul" ? <ul>{lista}</ul> : <ol>{lista}</ol>;
+  const Lista = ({ children }) =>
+    type === "ul" ? <ul>{children}</ul> : <ol>{children}</ol>;
+  return (
+    <Lista type={type}>
+      {list.map((text, i) => (
+        <li key={`li${i}`}>{text}</li>
+      ))}
+    </Lista>
+  );
 }

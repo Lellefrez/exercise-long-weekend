@@ -2,12 +2,24 @@ import CustomList from "./assets/components/CustomList";
 import "./App.css";
 
 function App() {
-  const listaOrdinata = ["alessio", "laura", "maks"];
-  const listaNonOrdinata = ["Alex", "laura", "maks"];
+  const allLists = [
+    {
+      title: "Invitati",
+      type: "ul",
+      list: ["Tizio", "Caio"],
+    },
+    {
+      title: "Invitati",
+      type: "ul",
+      list: ["Tizio", "Caio"],
+    },
+  ];
+  const list = ["Gianni", "Mario", "Arturo"];
   return (
     <>
-      <CustomList type="ol" list={listaOrdinata} />
-      <CustomList type="ul" list={listaNonOrdinata} />
+      <h2>Esercizio 1</h2>
+      <CustomList type={"ul"} list={list} />
+      <h2>Esercizio 2</h2>
     </>
   );
 }
