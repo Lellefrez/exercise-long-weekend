@@ -48,7 +48,11 @@ function App() {
                   Aggiungi
                 </button>
               </div>
-              <CustomList type={type} list={list} />
+              <CustomList
+                type={type}
+                list={list}
+                buttons={["Elimina", "Modifica"]}
+              />
             </div>
           );
         })}
