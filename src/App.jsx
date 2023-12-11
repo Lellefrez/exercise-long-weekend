@@ -4,22 +4,31 @@ import "./App.css";
 function App() {
   const allLists = [
     {
-      title: "Invitati",
+      title: "Cani",
       type: "ul",
+      list: ["Ryuk", "Kira"],
+    },
+    {
+      title: "Figli",
+      type: "ol",
       list: ["Tizio", "Caio"],
     },
     {
-      title: "Invitati",
+      title: "Frutta",
       type: "ul",
-      list: ["Tizio", "Caio"],
+      list: ["Mele", "Pere", "Banane"],
     },
   ];
-  const list = ["Gianni", "Mario", "Arturo"];
   return (
     <>
-      <h2>Esercizio 1</h2>
-      <CustomList type={"ul"} list={list} />
-      <h2>Esercizio 2</h2>
+      <div>
+        {allLists.map(({ title, type, list }) => (
+          <div key={`list${title}`}>
+            <h3>{title}</h3>
+            <CustomList type={type} list={list} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }
